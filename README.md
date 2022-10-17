@@ -90,7 +90,7 @@ InterfaceError: (InterfaceError) 2013: Lost connection to MySQL server during qu
 
 Какие есть пути решения:
 
-1) Ограничить доступную для `PostgreSQL` память
+1) Ограничить доступную для `PostgreSQL` память, используя параметры max_connections, shared_buffer, work_mem, effective_cache_size, maintenance_work_mem
 2) Не запускать на одном сервере с `PostgreSQL` другие приложения, которые могут утилизировать память
 3) Увеличить ресурсы сервера (есть вероятность, что текущих мощностей уже не хватает)
-4) Отключить `oom-killer`. Это небезопасно для сервера, поэтому не рекомендуется
+
